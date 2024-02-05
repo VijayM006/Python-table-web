@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students>25</title>
+</head>
+<body>
+    <table border="all" style="background-color: aqua;border-collapse: collapse;padding: 5px; text-align: center;">
+        <caption style="color: #8a2be2;">Students age less 25</caption>
+        <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Roll_No</th>
+        <th colspan="5">Marks</th>
+        </tr>
+        {%for i in students%}
+        {%if i.Age<25%}
+        <tr>
+            <td>{{i.Name}}</td>
+            <td>{{i.Age}}</td>
+            <td>{{i.Roll_No}}</td>
+            {%for j in i.Marks%}
+            <td>{{j}}</td>
+            {%endfor%}
+        </tr>
+        {%endif%}
+    </table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <table border="all" style="border-collapse: collapse; background-color: yellow;">
+        <caption style="color: aqua;">Students</caption>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Roll_No</th>
+            <th colspan="10">Marks</th>
+            
+        </tr>
+        {%for i in student %}
+        <tr>
+            <td>{{i.Name}}</td>
+            <td>{{i.Age}}</td>
+            <td>{{i.Roll_No}}</td>
+            {%for j in i.Marks %}
+            <td>{{j}}</td>
+            {%endfor%}
+        </tr>
+        {%endfor%}
+    </table>
+ 
+    
+
+</body>
+</html>
